@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reading List App</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/app.js"></script>
+
+  </head>
+  <body>
+    <p>LIST OF YOUR FAVOURTIE MMA FIGHTERS</p>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="name" class="primary">Fighter Name</label>
+          <input type="text" id="name" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="organization" class="primary">MMA Organization</label>
+          <input type="text" id="organization" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="weight" class="primary">Weight Category</label>
+          <select id="weight">
+            <option value="" disabled selected></option>
+            <option value="Strawweight">Strawweight</option>
+            <option value="Flyweight">Flyweight</option>
+            <option value="Bantamweight">Bantamweight</option>
+            <option value="Featherweight">Featherweight</option>
+            <option value="Lightweight">Lightweight</option>
+            <option value="Super Lightweight">Super Lightweight</option>
+            <option value="Welterweight">Welterweight</option>
+            <option value="Super Welterweight">Super Welterweight</option>
+            <option value="Middleweight">Middleweight</option>
+            <option value="Light Heavyweight">Light Heavyweight</option>
+            <option value="Cruiserweight">Cruiserweight</option>
+            <option value="Heavyweight">Heavyweight</option>
+            <option value="Super Heavyweight">Super Heavyweight</option>
+          </select>
+        </div>
+
+          <div class="form-item">
+                <h3>Please choose a fighting style:</h3>
+            <input type="radio" name="style" value="Stricker" id="style" required> Stricker<br>
+            <input type="radio" name="style" value="Grappler"> Grappler<br>
+            <input type="radio" name="style" value="Wresler"> Wresler
+          </div>
+
+      </div>
+
+      <input type="submit" value="Save" onclick = "playSound()"/>
+      <audio id="play" src="bruce-lee-scream.mp3" ></audio>
+      </form>
+
+
+<button id="delete-all">Delete All</button>
+    <h1>List of your Fighters</h1>
+    <div id="reading-list"></div>
+  </body>
+</html>
